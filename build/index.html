@@ -1,93 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Botpress in a div</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
- 
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        color: white;
-        background-color: #3498db; /* Blue background */
-        font-family: Arial, sans-serif;
-      }
- 
+
+<head>
+  <title>Botpress in a div</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+      background-color: #000000;
+      font-family: Arial, sans-serif;
+    }
+
+    .center-div {
+      width: 50vw;
+      height: 80vh;
+      background-color: rgb(102, 71, 255);
+      border-radius: 15px;
+      padding: 5px;
+      box-sizing: border-box;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 600px) {
       .center-div {
-        width: 50vw;
-        height: 80vh;
-        background-color: white; /* White background */
+        height: 40vh;
+        width: 80vw;
+        background-color: rgb(102, 71, 255);
         border-radius: 15px;
         padding: 5px;
         box-sizing: border-box;
-        color: #3498db; /* Blue text color */
+        color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
       }
- 
-      @media only screen and (max-width: 600px) {
-        .center-div {
-          height: 40vh;
-          width: 80vw;
-          background-color: white; /* White background */
-          border-radius: 15px;
-          padding: 5px;
-          box-sizing: border-box;
-          color: #3498db; /* Blue text color */
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-        }
-      }
-    </style>
-  </head>
- 
-  <body>
-    <div>
-      <p style="text-align: center; color: #3498db;">SLA engine <span><</span><span>div></span></p>
-      <div class="absolute inset-4 ">
-        <div
-          class="center-div relative h-full w-full overflow-clip rounded-md border border-blue-200 bg-blue-50 p-2 px-0 py-0"
-        >
-          <iframe
-            style="border: none;"
-            srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p style="text-align: center;">
+      Botpress Chatbot in a &lt;div&gt;
+    </p>
+    <div class="absolute inset-4">
+      <div class="center-div rounded-md border-zinc-200 bg-white p-2 relative h-full w-full overflow-clip border px-0 py-0">
+        <iframe style="border: none;" srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
             <script>
               window.botpressWebChat.init({
-                  'composerPlaceholder': 'Chat with SLA engine',
-                  'botConversationDescription': 'This chatbot was built surprisingly fast with Botpress',
-                  'botName': 'SLA engine,
-                  'botId': '05db24b3-c771-4d58-a990-090f32d0ec76',
-                  'hostUrl': 'https://cdn.botpress.cloud/webchat/v0',
-                  'messagingUrl': 'https://messaging.botpress.cloud',
-                  'clientId': 'f87c4530-e481-49dd-8841-236d83aa1389',
-                  'enableConversationDeletion': true,
-                  'showPoweredBy': true,
-                  'className': 'webchatIframe',
-                  'containerWidth': '100%25',
-                  'layoutWidth': '100%25',
-                  'hideWidget': true,
-                  'showCloseButton': false,
-                  'disableAnimations': true,
-                  'closeOnEscape': false,
-                  'showConversationsButton': false,
-                  'enableTranscriptDownload': false,
-                  'stylesheet':'https://webchat-styler-css.botpress.app/prod/code/3fcd3e4e-d5bc-4bf5-8699-14b621b3ada2/v31782/style.css'
-                  
+                'composerPlaceholder': 'Chat with Netcracker SLA agent Lucky Lumina',
+                'botConversationDescription': 'This is Netcracker Sales Lead Engine',
+                'botId': '05db24b3-c771-4d58-a990-090f32d0ec76',
+                'hostUrl': 'https://cdn.botpress.cloud/webchat/v0',
+                'messagingUrl': 'https://messaging.botpress.cloud',
+                'clientId': '05db24b3-c771-4d58-a990-090f32d0ec76',
+                'botName': 'Lucky Lumina',
+                'enableConversationDeletion': true,
+                'showPoweredBy': true,
+                'className': 'webchatIframe',
+                'containerWidth': '100%',
+                'layoutWidth': '100%',
+                'hideWidget': true,
+                'showCloseButton': false,
+                'disableAnimations': true,
+                'closeOnEscape': false,
+                'showConversationsButton': false,
+                'enableTranscriptDownload': false,
+                'stylesheet': 'https://webchat-styler-css.botpress.app/prod/code/3fcd3e4e-d5bc-4bf5-8699-14b621b3ada2/v31782/style.css',
+                'avatarUrl': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX3ITykJX58A2h9AqdoeeWvRLyF2IhYQSy2H6mhZywQO35rjECVYkLazOj56Bn-eRkzbQ&usqp=CAU',
+                'privacyPolicy': 'netcracker',
+                'website': 'https://netcracker.com'
               });
-            window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+              window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
             </script></body>"
-            width="100%"
-            height="100%"
-          ></iframe>
-        </div>
+          width="100%" height="100%"></iframe>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
