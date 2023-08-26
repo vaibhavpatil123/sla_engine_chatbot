@@ -1,97 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat Application</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Botpress in a div</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-/* Reset some default browser styles */
-body, h1, p {
-  margin: 0;
-  padding: 0;
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+    .absolute{
+      float:left
+    }
+	.col-md-6 {
+	    background: white !important;
+	}
+ .video{
+      width:100%;
+        height:100%;
+    }
+	.p-2 {
+		padding: 0px !important;
+	}
+    .center-div {
+          width: 48vw;
+          height: 95vh;
+   
+    }.bpw-chat-container {
+	    background-color: #ffffff !important;
+	}
+	.bpw-header-container {
+	    background: #525988 !important;
+	}
+	
+	.bpw-keyboard-single-choice {
+    background-color: #ffffff !important;
+    border: none;
+}
+.bpw-composer {
+    background-color: #525988 !important;
+    border-top: 1px solid #4b4b4b;
+}
+.bpw-button, .bpw-button-alt {
+    background-color: #525988 !important;
+	}
+	.bpw-from-bot .bpw-chat-bubble .bpw-chat-bubble-content {
+    background-color: #525988 !important;
+	}
+	
+	.bpw-from-user .bpw-chat-bubble .bpw-chat-bubble-content {
+    background-color: #525988 !important;
+    color: #ffffff !important;
+}
+.bpw-date-container .bpw-small-line {
+    border-bottom: 1px solid #525988 !important;
+    margin: 5px auto auto;
+    width: 80px;
 }
 
-.chat-container {
-  max-width: 400px;
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.chat-header {
-  background-color: #007bff;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-.chat-messages {
-  padding: 10px;
-  background-color: #f0f0f0;
-}
-
-.message {
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  max-width: 70%;
-}
-
-.incoming {
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
-
-.outgoing {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  align-self: flex-end;
-}
-
-.chat-input {
-  display: flex;
-  padding: 10px;
-  background-color: #f0f0f0;
-}
-
-.chat-input input {
-  flex: 1;
-  padding: 5px;
-  border: none;
-  border-radius: 5px 0 0 5px;
-}
-
-.chat-input button {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-}
-
-    
   </style>
 </head>
+
 <body>
-  <div class="chat-container">
-    <div class="chat-header">
-      <h1>Chat Application</h1>
-    </div>
-    <div class="chat-messages">
-      <div class="message incoming">
-        <p>Hello there!</p>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6" style="height: 100vh; ">
+        <!-- Left Column Content -->
+
+		  <video width="50%" height="50%" controls="autoplay">
+  <source src="https://assets.wowto.ai/app/company/C863d9ec2965240fb98d3bbfff448fffa/video/MAmmEfp47pb/english/MAmmEfp47pb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
       </div>
-      <div class="message outgoing">
-        <p>Hi! How can I help you?</p>
+      <div class="col-md-6" style=" height: 100vh; ">
+       <div class="center-div rounded-md border-zinc-200 bg-white p-2 relative h-full w-full overflow-clip border px-0 py-0">
+		   <iframe style="border: none;" srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
+					<script>
+					  window.botpressWebChat.init({
+						&quot;composerPlaceholder&quot;: &quot;Chat with Netcracker SLA agent Lucky Lumina&quot;,
+						&quot;botConversationDescription&quot;: &quot;This is Netcracker Sales Lead Engine&quot;,
+						&quot;botId&quot;: &quot;05db24b3-c771-4d58-a990-090f32d0ec76&quot;,
+						&quot;hostUrl&quot;: &quot;https://cdn.botpress.cloud/webchat/v0&quot;,
+						&quot;messagingUrl&quot;: &quot;https://messaging.botpress.cloud&quot;,
+						&quot;clientId&quot;: &quot;05db24b3-c771-4d58-a990-090f32d0ec76&quot;,
+						&quot;botName&quot;: &quot;Lucky Lumina&quot;,
+						&quot;enableConversationDeletion&quot;: true,
+						&quot;showPoweredBy&quot;: false,
+						&quot;className&quot;: &quot;webchatIframe&quot;,
+						&quot;containerWidth&quot;: &quot;100%25&quot;,
+						&quot;layoutWidth&quot;: &quot;100%25&quot;,
+						&quot;hideWidget&quot;: true,
+						&quot;showCloseButton&quot;: false,
+						&quot;disableAnimations&quot;: true,
+						&quot;closeOnEscape&quot;: false,
+						&quot;showConversationsButton&quot;: false,
+						&quot;enableTranscriptDownload&quot;: false,
+						&quot;stylesheet&quot;: &quot;https://raw.githubusercontent.com/vaibhavpatil123/sla_engine_chatbot/main/css/main.css&quot;,
+						&quot;avatarUrl&quot;: &quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX3ITykJX58A2h9AqdoeeWvRLyF2IhYQSy2H6mhZywQO35rjECVYkLazOj56Bn-eRkzbQ&usqp=CAU&quot;,
+						&quot;privacyPolicy&quot;: &quot;netcracker&quot;,
+						&quot;website&quot;: &quot;https://netcracker.com&quot;
+					  });
+					  window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+					</script></body>"
+				  width="100%" height="100%"></iframe>
+		 
+ 
+       </div>
       </div>
-      <!-- Add more messages here -->
-    </div>
-    <div class="chat-input">
-      <input type="text" placeholder="Type your message...">
-      <button>Send</button>
     </div>
   </div>
 </body>
+
 </html>
