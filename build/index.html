@@ -109,19 +109,27 @@
       background-color: var(--theme-primary-hover);
     }
     
+    /* Global Styles */
+    html {
+      font-size: 16px;
+    }
+    
+    /* Chat Interface Styles */
+    /* ... (your existing styles for the chat interface) ... */
     /* Video Styles */
     .video-container {
       background-color: #3498db;
-      height: 100vh;
-      padding: 20px;
+      height: 200vh;
+      padding: 60px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     video {
-      width: 50%;
-      height: 50%;
+      width: 100%;
+      height: auto;
+     max-height: 100%;
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     }
@@ -132,7 +140,7 @@
     <div class="row">
       <div class="col-md-6" style="background-color: #3498db; height: 100vh; padding: 20px;">
         <!-- Left Side Content -->
-     <video width="50%" height="50%" controls="autoplay">
+     <video controls="autoplay">
   <source src="https://assets.wowto.ai/app/company/C863d9ec2965240fb98d3bbfff448fffa/video/MAmmEfp47pb/english/MAmmEfp47pb.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -151,12 +159,6 @@
                   "botId": "05db24b3-c771-4d58-a990-090f32d0ec76",
                   "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
                   "messagingUrl": "https://messaging.botpress.cloud",
-                "botName": "NetSaleSLA",
-                "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX3ITykJX58A2h9AqdoeeWvRLyF2IhYQSy2H6mhZywQO35rjECVYkLazOj56Bn-eRkzbQ&usqp=CAU",
-                "termsConditions": "https://github.com/vaibhavpatil123/sla_engine_chatbot/blob/main/build/terms.html",
-                "privacyPolicy": "Necracker",
-                "emailAddress": "vaibhav.h.patil@gmil.com",
-                "website": "https://necracker.com",
                   "clientId": "05db24b3-c771-4d58-a990-090f32d0ec76",
                   "enableConversationDeletion": true,
                   "showPoweredBy": false,
@@ -169,7 +171,15 @@
                   "closeOnEscape": false,
                   "showConversationsButton": true,
                   "enableTranscriptDownload": true,
-          
+                   "botName": "NetSaleSLA",
+              "avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX3ITykJX58A2h9AqdoeeWvRLyF2IhYQSy2H6mhZywQO35rjECVYkLazOj56Bn-eRkzbQ&usqp=CAU",
+              "termsConditions": "https://github.com/vaibhavpatil123/sla_engine_chatbot/blob/main/build/terms.html",
+            "termsConditions": "https://github.com/vaibhavpatil123/sla_engine_chatbot/blob/main/build/terms.html",
+            "privacyPolicy": "Necracker",
+            "emailAddress": "vaibhav.h.patil@gmil.com",
+            "website": "https://necracker.com",
+            "stylesheet": "https://raw.githubusercontent.com/vaibhavpatil123/sla_engine_chatbot/main/css/main.css",
+            "website": "https://necracker.com",
               });
               window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: "show" }) }, ["LIFECYCLE.LOADED"]);
             </script>
