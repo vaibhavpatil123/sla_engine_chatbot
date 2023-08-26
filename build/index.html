@@ -4,6 +4,7 @@
 <head>
   <title>Botpress in a div</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
       display: flex;
@@ -15,7 +16,13 @@
       background-color: #000000;
       font-family: Arial, sans-serif;
     }
-
+    .absolute{
+      float:left
+    }
+ .video{
+      width:100%;
+        height:100%;
+    }
     .center-div {
       width: 100vw;
       height: 100vh;
@@ -33,7 +40,7 @@
     @media only screen and (max-width: 600px) {
       .center-div {
         height: 100%;
-        width: 100%;
+        width: 30%;
         background-color: rgb(102, 71, 255);
         border-radius: 15px;
         padding: 5px;
@@ -49,38 +56,47 @@
 </head>
 
 <body>
-  <div>
-    <div class="absolute inset-4">
-      <div class="center-div rounded-md border-zinc-200 bg-white p-2 relative h-full w-full overflow-clip border px-0 py-0">
-        <iframe style="border: none;" srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
-            <script>
-              window.botpressWebChat.init({
-                &quot;composerPlaceholder&quot;: &quot;Chat with Netcracker SLA agent Lucky Lumina&quot;,
-                &quot;botConversationDescription&quot;: &quot;This is Netcracker Sales Lead Engine&quot;,
-                &quot;botId&quot;: &quot;05db24b3-c771-4d58-a990-090f32d0ec76&quot;,
-                &quot;hostUrl&quot;: &quot;https://cdn.botpress.cloud/webchat/v0&quot;,
-                &quot;messagingUrl&quot;: &quot;https://messaging.botpress.cloud&quot;,
-                &quot;clientId&quot;: &quot;05db24b3-c771-4d58-a990-090f32d0ec76&quot;,
-                &quot;botName&quot;: &quot;Lucky Lumina&quot;,
-                &quot;enableConversationDeletion&quot;: true,
-                &quot;showPoweredBy&quot;: true,
-                &quot;className&quot;: &quot;webchatIframe&quot;,
-                &quot;containerWidth&quot;: &quot;100%25&quot;,
-                &quot;layoutWidth&quot;: &quot;100%25&quot;,
-                &quot;hideWidget&quot;: true,
-                &quot;showCloseButton&quot;: false,
-                &quot;disableAnimations&quot;: true,
-                &quot;closeOnEscape&quot;: false,
-                &quot;showConversationsButton&quot;: false,
-                &quot;enableTranscriptDownload&quot;: false,
-                &quot;stylesheet&quot;: &quot;https://webchat-styler-css.botpress.app/prod/code/3fcd3e4e-d5bc-4bf5-8699-14b621b3ada2/v31782/style.css&quot;,
-                &quot;avatarUrl&quot;: &quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX3ITykJX58A2h9AqdoeeWvRLyF2IhYQSy2H6mhZywQO35rjECVYkLazOj56Bn-eRkzbQ&usqp=CAU&quot;,
-                &quot;privacyPolicy&quot;: &quot;netcracker&quot;,
-                &quot;website&quot;: &quot;https://netcracker.com&quot;
-              });
-              window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
-            </script></body>"
-          width="100%" height="100%"></iframe>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6" style="background-color: #3498db; height: 100vh; padding: 20px;">
+        <!-- Left Column Content -->
+
+		  <iframe class="video" src="https://app.wowto.ai/embed/MMAwvB657pb&autolocale=true" title="WowTo video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-6" style="background-color: #f1f1f1; height: 100vh; padding: 20px;">
+       <div class="center-div rounded-md border-zinc-200 bg-white p-2 relative h-full w-full overflow-clip border px-0 py-0">
+		   <iframe style="border: none;" srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
+					<script>
+					  window.botpressWebChat.init({
+						"composerPlaceholder": "Chat with Netcracker SLA agent Lucky Lumina",
+						"botConversationDescription": "This is Netcracker Sales Lead Engine",
+						"botId": "05db24b3-c771-4d58-a990-090f32d0ec76",
+						"hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+						"messagingUrl": "https://messaging.botpress.cloud",
+						"clientId": "05db24b3-c771-4d58-a990-090f32d0ec76",
+						"botName": "Lucky Lumina",
+						"enableConversationDeletion": true,
+						"showPoweredBy": false,
+						"className": "webchatIframe",
+						"containerWidth": "100%25",
+						"layoutWidth": "100%25",
+						"hideWidget": true,
+						"showCloseButton": false,
+						"disableAnimations": true,
+						"closeOnEscape": false,
+						"showConversationsButton": false,
+						"enableTranscriptDownload": false,
+						"stylesheet": "https://webchat-styler-css.botpress.app/prod/code/3fcd3e4e-d5bc-4bf5-8699-14b621b3ada2/v31782/style.css",
+						"avatarUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX3ITykJX58A2h9AqdoeeWvRLyF2IhYQSy2H6mhZywQO35rjECVYkLazOj56Bn-eRkzbQ&usqp=CAU",
+						"privacyPolicy": "netcracker",
+						"website": "https://netcracker.com"
+					  });
+					  window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+					</script></body>"
+				  width="100%" height="100%"></iframe>
+		 
+ 
+       </div>
       </div>
     </div>
   </div>
