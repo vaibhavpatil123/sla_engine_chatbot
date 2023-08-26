@@ -3,7 +3,7 @@ html {
   font-size: 16px;
 }
 
-/* These CSS rules sets the text direction of the paragraph (RTL or LTR) */
+/* These CSS rules set the text direction of the paragraph (RTL or LTR) */
 p,
 .bpw-from-bot > div,
 #input-message {
@@ -28,8 +28,7 @@ p,
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  border: 1px;
-  border-radius: 10px;
+  border: 1px solid;
   color: #4e4e4e;
 }
 
@@ -64,7 +63,6 @@ p,
   color: #ffffff;
 }
 
-
 /* Styling for the keyboard single choice option */
 .bpw-keyboard-single-choice {
   background-color: #525988;
@@ -78,15 +76,15 @@ p,
   color: #ffffff;
   border-radius: 10px;
   border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
-
 
 /* Styling for hover effect on the buttons in the chat interface */
 .bpw-button:hover,
 .bpw-button-alt:hover {
   background-color: #4b4b4b;
 }
-
 
 /* Styling for hyperlinks in the chat interface */
 a {
@@ -119,7 +117,6 @@ a {
   background-color: #525988;
   border-top: 1px solid #4b4b4b;
 }
-
 
 /* Styling for the scrollbar in the chat container */
 .bpw-chat-container::-webkit-scrollbar,
@@ -188,42 +185,4 @@ a {
 /* Styling for hover effect on the hyperlinks in the 'powered by' section of the chat interface */
 .bpw-powered a:hover {
   text-decoration: underline;
-}
-
-
-/* Styling for the send button when it's disabled */
-.bpw-send-button:disabled,
-.bpw-send-button:disabled:hover {
-  opacity: 0.4;
-  background-color: var(--theme-primary);
-  cursor: default;
-}
-
-/* Styling for the send buttons */
-.bpw-send-buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-/* Styling for the individual send button */
-.bpw-send-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: var(--spacing-medium);
-  background-color: var(--theme-primary);
-  padding: 20px;
-  width: 24px;
-  height: 24px;
-  color: transparent;
-  cursor: pointer;
-  background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2217%22%20height%3D%2220%22%20viewBox%3D%220%200%2017%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.77152%201.04207L15.5347%209.13807C16.192%209.52472%2016.192%2010.4753%2015.5347%2010.8619L8.5%2015L1.70485%2018.9971C0.998111%2019.4129%200.118918%2018.8481%200.203121%2018.0325L0.811331%2012.1412C0.85993%2011.6705%201.23186%2011.2983%201.70256%2011.2493L8.21533%2010.5717C9.32302%2010.4565%209.44138%208.88961%208.36357%208.60928L1.54478%206.83574C1.15164%206.73349%200.859426%206.40357%200.805392%206.00096L0.27339%202.03702C0.162447%201.21039%201.05263%200.619195%201.77152%201.04207Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A') !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  transition: background-color 0.2s;
-}
-
-.bpw-send-button:not(:disabled):hover {
-  background-color: var(--theme-primary-hover);
 }
