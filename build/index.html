@@ -58,15 +58,7 @@
       border-top: 1px solid #4b4b4b;
     }
 
-    .bpw-send-button,
-    .bpw-send-button-alt {
-      background-color: #323232;
-      color: #ffffff;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
+   
 
     .bpw-send-button:hover,
     .bpw-send-button-alt:hover {
@@ -93,8 +85,8 @@
       align-items: center;
     }
 
-    .bpw-send-button {
-      background-color: var(--theme-primary);
+    .bpw-send-buttons > .bpw-send-button {
+      background: #4d7aa1 !important;
       color: transparent;
       border: none;
       border-radius: var(--spacing-medium);
@@ -113,6 +105,10 @@
     html {
       font-size: 16px;
     }
+
+ #btn-send{
+  background: #4d7aa1 !important;
+ }
     
     /* Chat Interface Styles */
     /* ... (your existing styles for the chat interface) ... */
@@ -127,12 +123,15 @@
     }
 
     video {
-      width: 100%;
-      height: auto;
-     max-height: 100%;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    }
+    /* text-align: center; */
+    width: 75%;
+    height: auto;
+    margin: 9% 9% 7% 9%;
+    max-height: 100%;
+    border-radius: 10px;
+    align-self: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
 
  /* Custom marquee styling */
   /* Custom marquee styling */
@@ -151,6 +150,12 @@
       padding-left: 100%;
       animation: marquee 12s linear infinite;
     }
+    .logo{
+      position: relative;
+    margin: 10px 15px 15px 10px;
+    width: 8vw;
+
+    }
     
     @keyframes marquee {
       0% {
@@ -168,17 +173,19 @@
         <div class="col-md-12">
         <!-- Marquee container -->
         <div class="marquee-container">
-         <marquee direction="right">  <span>🚀🥳 Exciting Announcement: Introducing our cutting-edge chatbot, 👉💎NETSaleSLA! Engage in a whole new way of interaction. Don't miss out!🥳🚀</span></marquee>
+          <marquee direction="right">  <span>🚀🥳 Exciting Announcement: Introducing our cutting-edge chatbot, 👉💎NETSaleSLA! Engage in a whole new way of interaction. Don't miss out!🥳🚀</span></marquee>
         </div>
       </div>
-      <div class="col-md-6" style="background-color: #3498db; height: 100vh; padding: 20px;">
+     
+      <div class="col-md-8" style="background-color: #f1f1f1; height: 100vh; padding: 20px;">
+        <img class="logo" src="https://pbs.twimg.com/media/C_m6zOaXoAANwTl?format=png&name=4096x4096">
         <!-- Left Side Content -->
      <video controls="autoplay">
   <source src="https://assets.wowto.ai/app/company/C863d9ec2965240fb98d3bbfff448fffa/video/MAmmEfp47pb/english/MAmmEfp47pb.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
       </div>
-      <div class="col-md-6" style="background-color: #f1f1f1; height: 100vh; padding: 20px;">
+      <div class="col-md-4" style="background-color: #f1f1f1; height: 100vh; padding: 20px;">
       
         <!-- Right Side Content -->
         <!-- Right Side Content -->
